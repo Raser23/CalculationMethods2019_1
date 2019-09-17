@@ -1,11 +1,11 @@
 import numpy as np
 
 
-def predictor_corrector(x, y0, l, f):
+def predictor_corrector(x, initial_y, l, f):
     n = x.shape[0]
     h = x[1] - x[0]
     y = np.zeros(n)
-    y[0] = y0
+    y[0] = initial_y[0]
 
     for i in range(1, n):
         xi1 = x[i - 1]
